@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boa Ideia Creaciones — Moda italiana para la mujer chilena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F3EE;
+    --warm-white: #FBF9F6;
+    --espresso: #2C1F14;
+    --terracota: #B85C3A;
+    --terracota-light: #E8C4B4;
+    --sage: #8A9E8C;
+    --gold: #C9A96E;
+    --text-muted: #7A6B5D;
+    --border: rgba(44,31,20,0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--warm-white);
+    color: var(--espresso);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(251,249,246,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--espresso);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--terracota); }
+
+  nav a.ig-link {
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav a.ig-link:hover { color: var(--terracota); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 72px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 6rem 6rem;
+    position: relative;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--espresso);
+    margin-bottom: 1rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--terracota);
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 380px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--espresso);
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    transition: background 0.25s, transform 0.2s;
+    align-self: flex-start;
+  }
+
+  .hero-cta:hover {
+    background: var(--terracota);
+    transform: translateY(-1px);
+  }
+
+  .hero-cta svg { width: 16px; height: 16px; }
+
+  .hero-right {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--espresso) 0px,
+      var(--espresso) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+  }
+
+  .hero-badge {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .hero-badge-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid var(--terracota-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    position: relative;
+  }
+
+  .hero-badge-circle::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 0.5px solid var(--terracota-light);
+  }
+
+  .hero-badge-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--terracota);
+    line-height: 1;
+  }
+
+  .hero-badge-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .hero-badge-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--espresso);
+  }
+
+  /* ── STRIP ── */
+  .strip {
+    background: var(--espresso);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem 2rem;
+    overflow: hidden;
+  }
+
+  .strip-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.9;
+  }
+
+  .strip-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--terracota);
+    flex-shrink: 0;
+  }
+
+  /* ── PROPUESTA ── */
+  .propuesta {
+    padding: 7rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .propuesta-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--espresso);
+  }
+
+  .propuesta-text h2 em {
+    font-style: italic;
+    color: var(--terracota);
+  }
+
+  .propuesta-text p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .propuesta-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .prop-card {
+    background: var(--cream);
+    border: 0.5px solid var(--border);
+    padding: 1.75rem 1.5rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .prop-card:hover {
+    border-color: var(--terracota-light);
+    transform: translateY(-2px);
+  }
+
+  .prop-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .prop-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--espresso);
+  }
+
+  .prop-card p {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* ── COLECCIÓN ── */
+  .coleccion {
+    background: var(--cream);
+    padding: 6rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 300;
+    color: var(--espresso);
+    line-height: 1.2;
+  }
+
+  .coleccion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .coleccion-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .coleccion-visual {
+    aspect-ratio: 3/4;
+    background: var(--warm-white);
+    border: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+
+  .coleccion-item:hover .coleccion-visual {
+    transform: scale(1.02);
+  }
+
+  .coleccion-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0.25;
+  }
+
+  .coleccion-placeholder svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--espresso);
+    fill: none;
+    stroke-width: 1;
+  }
+
+  .coleccion-placeholder span {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--espresso);
+  }
+
+  .coleccion-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .coleccion-item:hover .coleccion-visual img {
+    transform: scale(1.04);
+  }
+
+  .coleccion-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--espresso);
+    color: var(--cream);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .coleccion-info {
+    padding: 1rem 0 0.25rem;
+  }
+
+  .coleccion-info h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--espresso);
+    margin-bottom: 0.2rem;
+  }
+
+  .coleccion-info p {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--text-muted);
+  }
+
+  .coleccion-cta {
+    text-align: center;
+    margin-top: 3.5rem;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid var(--espresso);
+    color: var(--espresso);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    transition: background 0.25s, color 0.25s;
+  }
+
+  .btn-outline:hover {
+    background: var(--espresso);
+    color: var(--cream);
+  }
+
+  /* ── FILOSOFÍA ── */
+  .filosofia {
+    padding: 8rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    align-items: start;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .filosofia-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracota);
+    padding-top: 0.4rem;
+  }
+
+  .filosofia-content blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--espresso);
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--terracota);
+    padding-left: 2rem;
+  }
+
+  .filosofia-content p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-muted);
+  }
+
+  /* ── INSTAGRAM ── */
+  .ig-section {
+    background: var(--espresso);
+    color: var(--cream);
+    padding: 6rem;
+    text-align: center;
+  }
+
+  .ig-section .section-eyebrow { color: var(--terracota-light); }
+  .ig-section .section-title { color: var(--cream); }
+
+  .ig-handle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    border: 0.5px solid rgba(255,255,255,0.25);
+    padding: 1rem 2.5rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .ig-handle:hover {
+    border-color: var(--terracota-light);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .ig-handle svg { width: 22px; height: 22px; }
+
+  .ig-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 0.5px solid rgba(255,255,255,0.1);
+  }
+
+  .ig-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--cream);
+    display: block;
+  }
+
+  .ig-stat-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-top: 0.25rem;
+    display: block;
+  }
+
+  /* ── CONTACTO ── */
+  .contacto {
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .contacto h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .contacto p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .contacto-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contacto-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--espresso);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contacto-link:hover { color: var(--terracota); }
+
+  .contacto-link span {
+    width: 32px;
+    height: 32px;
+    border: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contacto-link svg { width: 16px; height: 16px; }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    border: 0.5px solid var(--border);
+    background: transparent;
+    padding: 0.85rem 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--espresso);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--terracota);
+  }
+
+  .form-group textarea { height: 100px; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--espresso);
+    color: var(--cream);
+    border: none;
+    padding: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+
+  .btn-submit:hover { background: var(--terracota); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--espresso);
+    color: rgba(255,255,255,0.4);
+    padding: 2rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+  }
+
+  footer .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── ANIMACIONES ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.7s ease 0.1s both; }
+  .hero-title   { animation: fadeUp 0.7s ease 0.25s both; }
+  .hero-sub     { animation: fadeUp 0.7s ease 0.4s both; }
+  .hero-cta     { animation: fadeUp 0.7s ease 0.55s both; }
+  .hero-badge   { animation: fadeUp 0.9s ease 0.3s both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1.25rem 1.5rem; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 3rem 1.5rem; }
+    .hero-right { padding: 3rem 1.5rem; min-height: 300px; }
+
+    .propuesta { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 3rem; }
+    .coleccion { padding: 4rem 1.5rem; }
+    .coleccion-grid { grid-template-columns: 1fr 1fr; }
+
+    .filosofia { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 2rem; }
+    .ig-section { padding: 4rem 1.5rem; }
+    .ig-stats { gap: 2rem; }
+
+    .contacto { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 3rem; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Boa <span>Ideia</span></a>
+  <a href="https://www.instagram.com/boaideia.tienda/" target="_blank" class="ig-link">@boaideia.tienda</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Moda italiana · Alma latinoamericana</p>
+    <h1 class="hero-title">
+      Vestir es un acto<br>de <em>amor propio</em>
+    </h1>
+    <p class="hero-sub">
+      Ropa de mujer fabricada en Italia, importada directamente para ti.
+      Estilo pronto moda con identidad y carácter, disponible en Chile.
+    </p>
+    <a href="https://www.instagram.com/boaideia.tienda/" target="_blank" class="hero-cta">
+      Ver colección
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M7 17L17 7M17 7H7M17 7v10"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-pattern"></div>
+    <div class="hero-badge">
+      <div class="hero-badge-circle">
+        <span class="hero-badge-num">10K</span>
+        <span class="hero-badge-label">Seguidoras</span>
+      </div>
+      <p class="hero-badge-sub">501 publicaciones y contando</p>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item"><span class="strip-dot"></span> Fabricado en Italia</div>
+  <div class="strip-item"><span class="strip-dot"></span> Importación directa</div>
+  <div class="strip-item"><span class="strip-dot"></span> Pronto moda</div>
+  <div class="strip-item"><span class="strip-dot"></span> Santiago de Chile</div>
+  <div class="strip-item"><span class="strip-dot"></span> Amor propio</div>
+</div>
+
+<!-- PROPUESTA -->
+<section class="propuesta">
+  <div class="propuesta-text">
+    <h2>Una <em>curaduría</em><br>hecha con criterio</h2>
+    <p>
+      No vendemos ropa masiva. Seleccionamos piezas con identidad, fabricadas en Italia bajo los estándares del pronto moda europeo, y las traemos directamente a Chile.
+    </p>
+    <p>
+      Cada temporada es una edición pensada para la mujer que valora la calidad, el diseño y la exclusividad sin pretensiones.
+    </p>
+  </div>
+  <div class="propuesta-cards">
+    <div class="prop-card">
+      <span class="prop-card-icon">🇮🇹</span>
+      <h3>Origen italiano</h3>
+      <p>Prendas fabricadas en Italia con materiales y acabados de calidad europea.</p>
+    </div>
+    <div class="prop-card">
+      <span class="prop-card-icon">✈️</span>
+      <h3>Importación directa</h3>
+      <p>Sin intermediarios. Del fabricante a tu clóset, con el precio justo.</p>
+    </div>
+    <div class="prop-card">
+      <span class="prop-card-icon">🌿</span>
+      <h3>Ediciones limitadas</h3>
+      <p>Pocas unidades por diseño. Para que lo que usas no lo use cualquiera.</p>
+    </div>
+    <div class="prop-card">
+      <span class="prop-card-icon">💛</span>
+      <h3>Amor propio</h3>
+      <p>Cada prenda es una invitación a reconocerte, celebrarte y vestirte para ti.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COLECCIÓN -->
+<section class="coleccion">
+  <div class="section-header">
+    <p class="section-eyebrow">Colección actual</p>
+    <h2 class="section-title">Lo que hay disponible</h2>
+  </div>
+  <div class="coleccion-grid">
+
+    <!-- Fila 1 -->
+    <div class="coleccion-item">
+      <div class="coleccion-visual">
+        <img src="img/blusa-romantica-negra.jpg" alt="Blusa romántica negra con smocking y volantes">
+        <div class="coleccion-tag">Novedad</div>
+      </div>
+      <div class="coleccion-info">
+        <h4>Blusa Romántica Negra</h4>
+        <p>Cuerpo fruncido, volantes en hombros y cuello alto · Ver en Instagram →</p>
+      </div>
+    </div>
+
+    <div class="coleccion-item">
+      <div class="coleccion-visual">
+        <img src="img/blusa-romantica-sage.jpg" alt="Blusa romántica en verde salvia con smocking y volantes">
+        <div class="coleccion-tag">Destacado</div>
+      </div>
+      <div class="coleccion-info">
+        <h4>Blusa Romántica Sage</h4>
+        <p>Misma silueta en verde salvia italiano · Ver en Instagram →</p>
+      </div>
+    </div>
+
+    <div class="coleccion-item">
+      <div class="coleccion-visual">
+        <img src="img/sweater-cuello-vuelto-beige.jpg" alt="Sweater oversize cuello vuelto color beige topo">
+      </div>
+      <div class="coleccion-info">
+        <h4>Sweater Cuello Vuelto Topo</h4>
+        <p>Oversize con caída amplia, tejido suave · Ver en Instagram →</p>
+      </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="coleccion-item">
+      <div class="coleccion-visual">
+        <img src="img/sweater-cuello-vuelto-oliva.jpg" alt="Sweater oversize cuello vuelto color verde oliva">
+      </div>
+      <div class="coleccion-info">
+        <h4>Sweater Cuello Vuelto Oliva</h4>
+        <p>Silueta envolvente en verde oliva · Ver en Instagram →</p>
+      </div>
+    </div>
+
+    <div class="coleccion-item">
+      <div class="coleccion-visual">
+        <img src="img/sweater-cuello-vuelto-navy.jpg" alt="Sweater oversize cuello vuelto color azul marino">
+      </div>
+      <div class="coleccion-info">
+        <h4>Sweater Cuello Vuelto Navy</h4>
+        <p>Clásico atemporal en azul marino profundo · Ver en Instagram →</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="coleccion-cta">
+    <a href="https://www.instagram.com/boaideia.tienda/" target="_blank" class="btn-outline">
+      Ver colección completa en Instagram
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M7 17L17 7M17 7H7M17 7v10"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- FILOSOFÍA -->
+<section class="filosofia">
+  <p class="filosofia-label">Nuestra filosofía</p>
+  <div class="filosofia-content">
+    <blockquote>
+      "Fomentamos el amor propio a través de la moda."
+    </blockquote>
+    <p>
+      Creemos que vestirse bien no es vanidad, es autorespeto. Cada prenda que seleccionamos busca que la mujer que la usa se sienta exactamente como es: única, capaz y merecedora de lo mejor.
+    </p>
+    <p>
+      Por eso importamos directo desde Italia. Para que el acceso a la moda de calidad no dependa de dónde naciste, sino de saber lo que vales.
+    </p>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="ig-section">
+  <div class="section-header">
+    <p class="section-eyebrow">Síguenos</p>
+    <h2 class="section-title">Todo pasa en Instagram</h2>
+  </div>
+  <a href="https://www.instagram.com/boaideia.tienda/" target="_blank" class="ig-handle">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+    @boaideia.tienda
+  </a>
+  <div class="ig-stats">
+    <div>
+      <span class="ig-stat-num">10K</span>
+      <span class="ig-stat-label">Seguidoras</span>
+    </div>
+    <div>
+      <span class="ig-stat-num">501</span>
+      <span class="ig-stat-label">Publicaciones</span>
+    </div>
+    <div>
+      <span class="ig-stat-num">361</span>
+      <span class="ig-stat-label">Siguiendo</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+  <div>
+    <h2>Hablemos</h2>
+    <p>
+      Si quieres saber de disponibilidad, puntos de venta, o simplemente conectar con nosotras, escríbenos directamente. Somos cercanas y respondemos.
+    </p>
+    <div class="contacto-links">
+      <a href="https://www.instagram.com/boaideia.tienda/" target="_blank" class="contacto-link">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </span>
+        @boaideia.tienda en Instagram
+      </a>
+      <a href="https://boaideia.cl" class="contacto-link">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+          </svg>
+        </span>
+        www.boaideia.cl
+      </a>
+    </div>
+  </div>
+  <div>
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" placeholder="Tu nombre">
+    </div>
+    <div class="form-group">
+      <label>Email o Instagram</label>
+      <input type="text" placeholder="@tuusuario o tu@email.com">
+    </div>
+    <div class="form-group">
+      <label>Mensaje</label>
+      <textarea placeholder="¿En qué te podemos ayudar?"></textarea>
+    </div>
+    <button class="btn-submit" onclick="alert('Pronto habilitaremos el formulario. Mientras tanto escríbenos por Instagram 💛')">
+      Enviar mensaje
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Boa Ideia Creaciones</span>
+  <span>Santiago, Chile · Moda italiana · © 2026</span>
+</footer>
+
+</body>
+</html>
