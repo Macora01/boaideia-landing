@@ -220,6 +220,16 @@ h1 em{color:var(--accent);font-style:normal}
   margin:0 0 2px;
 }
 .store .hours{color:var(--fg)}
+.store .addr{
+  display:flex;
+  align-items:flex-start;
+  gap:6px;
+  text-decoration:none;
+  color:var(--fg-muted);
+  transition:color .15s ease;
+}
+.store .addr:hover{color:var(--accent)}
+.store .addr svg{width:14px;height:14px;flex:none;margin-top:2px}
 
 footer{
   border-top:1px solid var(--border);
@@ -323,27 +333,42 @@ footer{
       <div class="store-list">
         <div class="store">
           <h4>Local Vivo Los Trapenses</h4>
-          <p>Av. José Alcalde Délano 10492, nivel Unimarc, zona Tendencias, local 7, Lo Barnechea.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Local%20Vivo%20Los%20Trapenses%2C%20Av.%20Jos%C3%A9%20Alcalde%20D%C3%A9lano%2010492%2C%20nivel%20Unimarc%2C%20Lo%20Barnechea" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Av. José Alcalde Délano 10492, nivel Unimarc, zona Tendencias, local 7, Lo Barnechea.</span>
+          </a>
           <p class="hours">Lunes a domingo, 10:00 a 20:00 hrs.</p>
         </div>
         <div class="store">
           <h4>Local Pueblo del Inglés</h4>
-          <p>Local 39, Galería Cristal, Vitacura 6255, Santiago.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Local%20Pueblo%20del%20Ingl%C3%A9s%2C%20Galer%C3%ADa%20Cristal%2C%20Vitacura%206255%2C%20Santiago" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Local 39, Galería Cristal, Vitacura 6255, Santiago.</span>
+          </a>
           <p class="hours">Lunes a viernes, 10:00 a 19:00 hrs. Sábado, 10:00 a 14:00 hrs. Domingo cerrado.</p>
         </div>
         <div class="store">
           <h4>La Tienda de Linderos</h4>
-          <p>Stripcenter Los Linderos, segundo piso, Buin.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=La%20Tienda%20de%20Linderos%2C%20Stripcenter%20Los%20Linderos%2C%20Buin" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Stripcenter Los Linderos, segundo piso, Buin.</span>
+          </a>
           <p class="hours">Horarios: @la_tienda_de_linderos</p>
         </div>
         <div class="store">
           <h4>Casa Dominicos</h4>
-          <p>Av. La Plaza 651, Las Condes.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Casa%20Dominicos%2C%20Av.%20La%20Plaza%20651%2C%20Las%20Condes" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Av. La Plaza 651, Las Condes.</span>
+          </a>
           <p class="hours">Horarios: @casadominicos</p>
         </div>
         <div class="store">
           <h4>Campera Concept Store</h4>
-          <p>Av. Virginia Subercaseaux 475, Pirque.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Campera%20Concept%20Store%2C%20Av.%20Virginia%20Subercaseaux%20475%2C%20Pirque" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Av. Virginia Subercaseaux 475, Pirque.</span>
+          </a>
           <p class="hours">Horarios: @campera.cl</p>
         </div>
       </div>
@@ -354,17 +379,26 @@ footer{
       <div class="store-list">
         <div class="store">
           <h4>Boa Ideia Patio Santa Teresa</h4>
-          <p>Av. Santa Teresa de los Andes 100, Santo Domingo, Región de Valparaíso.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Boa%20Ideia%20Patio%20Santa%20Teresa%2C%20Av.%20Santa%20Teresa%20de%20los%20Andes%20100%2C%20Santo%20Domingo%2C%20Regi%C3%B3n%20de%20Valpara%C3%ADso" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Av. Santa Teresa de los Andes 100, Santo Domingo, Región de Valparaíso.</span>
+          </a>
           <p class="hours">Martes a sábado, 11:00 a 19:00 hrs. Domingo, 11:00 a 14:00 hrs. Lunes cerrado.</p>
         </div>
         <div class="store">
           <h4>Aldea Concept — Rancagua</h4>
-          <p>Av. San Juan 1157, local 11, Machalí, Región del Libertador Bernardo O'Higgins.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Aldea%20Concept%20Rancagua%2C%20Av.%20San%20Juan%201157%2C%20Machal%C3%AD%2C%20Rancagua" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Av. San Juan 1157, local 11, Machalí, Región del Libertador Bernardo O'Higgins.</span>
+          </a>
           <p class="hours">Horarios: @aldeaconcept</p>
         </div>
         <div class="store">
           <h4>Concept Mil Estilos</h4>
-          <p>Av. San Juan 133-C, Machalí, Región del Libertador Bernardo O'Higgins.</p>
+          <a class="addr" href="https://www.google.com/maps/search/?api=1&query=Concept%20Mil%20Estilos%2C%20Av.%20San%20Juan%20133-C%2C%20Machal%C3%AD%2C%20Rancagua" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-7.2-7-12a7 7 0 1 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+            <span>Av. San Juan 133-C, Machalí, Región del Libertador Bernardo O'Higgins.</span>
+          </a>
         </div>
       </div>
     </div>
